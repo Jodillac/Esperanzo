@@ -1,0 +1,39 @@
+# Site settings
+title: Omnivium - Italian Fansub
+description: "Italian Fansub"
+baseurl: "" # for test: remove string '/space-jekyll-template' to ''
+url: "https://omniviumfansub.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
+
+# User settings
+username: Omnivium
+user_title: Omnivium
+facebook_username: OmniviumFansub
+profile_picture: https://pbs.twimg.com/profile_images/755720093074493440/pNwnpPqR_400x400.jpg
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+links:
+  section_1:
+    - title: home
+      url: /
+      key_trigger: 1
+    - title: serie
+      url: /series
+      key_trigger: 2
+    - title: cerca
+      url: ""
+      key_trigger: s #WARNING: search only works with "s"
+
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
