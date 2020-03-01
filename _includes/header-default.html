@@ -1,0 +1,37 @@
+<header class="header-site" role="banner">
+    <div class="content">
+
+        <div class="person">
+            <img alt="My photo" src="{{site.profile_picture}}">
+        </div>
+
+        <h1>
+            <span class="site-title">[{{site.username}}]</span>
+        </h1>
+        <h2>
+			<span class="user-description">{{site.description}}</span>
+        </h2>
+
+        <div class="icons-home">
+            <a aria-label="Facebook" title="Facebook page" target="_blank" href="https://www.facebook.com/{{site.facebook_username}}">
+                <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+            </a>
+
+            <a aria-label="Use the RSS to get updated" title="Register for my RSS" target="_blank" href="https://nyaa.si/?page=rss&u=Omnivium">
+                <svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg>
+            </a>
+        </div>
+
+        <ul class="recent">
+            <p>Ultime release:</p>
+             {% for post in site.posts limit:3%}
+                <li>
+                    <a title="Release" href="{{ post.url | prepend: site.baseurl }}">
+                        <h2 class="post-title" itemprop="name">{{ post.title }}</h2>
+                    </a>
+                </li>
+              {% endfor %}
+        </ul>
+    </div>
+    {% include menu-search.html %}
+</header>
